@@ -1,4 +1,4 @@
-FROM ubuntu:14.04.4
+FROM ubuntu:14.04
 MAINTAINER skyfaith@topca.cn
 RUN apt-get update
 RUN apt-get install -y openssh-server
