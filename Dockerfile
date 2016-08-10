@@ -6,7 +6,7 @@ RUN apt-get install -y openjdk-6-jdk
 
 ENV TOMCAT_VERSION 8.0.35
 ENV JAVA_HOME /usr/lib/jvm/java-6-openjdk-amd64
-RUN wget --quiet --no-cookies http://apache.rediris.es/tomcat/tomcat-8/v8.0.35/bin/apache-tomcat-8.0.35.tar.gz -O /tmp/tomcat.tgz
+RUN wget --quiet http://apache.rediris.es/tomcat/tomcat-8/v8.0.35/bin/apache-tomcat-8.0.35.tar.gz -O /tmp/tomcat.tgz
 tar xzvf /tmp/tomcat.tgz -C /opt
 mv /opt/apache-tomcat-8.0.35 /opt/tomcat
 rm /tmp/tomcat.tgz
