@@ -6,8 +6,7 @@ RUN apt-get install -y openjdk-6-jdk
 
 ENV TOMCAT_VERSION 8.0.35
 ENV JAVA_HOME /usr/lib/jvm/java-6-openjdk-amd64
-RUN cd /tmp
-RUN wget -q http://mirror.bit.edu.cn/apache/tomcat/tomcat-8/v8.0.36/bin/apache-tomcat-8.0.36.tar.gz
+RUN wget -q http://mirror.bit.edu.cn/apache/tomcat/tomcat-8/v8.0.36/bin/apache-tomcat-8.0.36.tar.gz -O /tmp/apache-tomcat-8.0.36.tar.gz
 RUN tar xzvf /tmp/apache-tomcat-8.0.36.tar.gz -C /opt
 RUN mv /opt/apache-tomcat-8.0.36 /opt/tomcat
 RUN rm /tmp/apache-tomcat-8.0.36.tar.gz
