@@ -2,10 +2,10 @@ FROM ubuntu:14.04
 MAINTAINER skyfaith@topca.cn
 RUN apt-get update
 RUN apt-get install -y openssh-server
-RUN apt-get install -y openjdk-6-jdk
+RUN apt-get install -y openjdk-7-jdk
 
 ENV TOMCAT_VERSION 8.0.35
-ENV JAVA_HOME /usr/lib/jvm/java-6-openjdk-amd64
+ENV JAVA_HOME /usr/lib/jvm/java-7-openjdk-amd64
 RUN wget -q http://mirror.bit.edu.cn/apache/tomcat/tomcat-8/v8.0.36/bin/apache-tomcat-8.0.36.tar.gz -O /tmp/apache-tomcat-8.0.36.tar.gz
 RUN tar xzvf /tmp/apache-tomcat-8.0.36.tar.gz -C /opt
 RUN mv /opt/apache-tomcat-8.0.36 /opt/tomcat
